@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style type="text/css">
+        body {
+            background-image: url('christ university.jpg');
+            background-size: cover;
+            /* background-size: 100% 100%; */
+        }
+
+        section {
+
+            width: 500px;
+            height: 100%;
+            margin: 100px auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+        }
+
+        div {
+            width: 100%;
+            margin: 15px auto;
+        }
+
+        #lableinput {
+            font-family: sans-serif;
+            display: block;
+            padding: 20px;
+            font-size: 25px;
+        }
+
+        /* label{
+            
+            display: block;
+            padding:20px;
+            font-size: 25px;
+        } */
+        #submitbutton {
+
+            width: 96%;
+            padding: 10px;
+            border: 1px red;
+            margin-left: 20px;
+            border-radius: 3px;
+        }
+
+        #checkboxinput {
+            font-family: sans-serif;
+            display: block;
+            padding: 20px;
+            font-size: 25px;
+        }
+
+        #checkboxvalue {
+
+            font-family: sans-serif;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        #checkbox {
+            font-family: sans-serif;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        #comment {
+            padding: 40px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        #input {
+            font-family: sans-serif;
+            width: 96%;
+            padding: 10px;
+            border: 1px red;
+            margin-left: 20px;
+            border-radius: 3px;
+        }
+
+        span {
+
+
+            display: block;
+            margin-left: 20px;
+            color: red;
+            font-style: italic;
+        }
+
+        .button {
+            background-color: rgba(26, 140, 197, 0.856);
+            border: none;
+            color: rgb(232, 241, 240);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 15px auto;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s;
+            width: 100%;
+        }
+
+        .button2:hover {
+            box-shadow: 0 12px 16px 0 rgba(223, 11, 11, 0.24), 0 17px 50px 0 rgba(212, 8, 8, 0.19);
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 style="color:rgba(0, 0, 0, 0.856);text-align:center;font-family:sans-serif;">CHRIST UNIVERSITY</h1>
+    <h1 style="color:rgba(0, 0, 0, 0.856);text-align:center;font-family:sans-serif;">FEEDBACK</h1>
+    <section>
+        <form action="">
+            <div>
+                <label id="lableinput" for="fname">Name</label>
+                <input type="fname" id="input" placeholder="Name">
+                <span></span>
+            </div>
+            <!-- <div>
+                <label for="lname">Last Name</label>
+                <input type="lname" id="lname" placeholder="Last Name">
+                <span></span>
+            </div> -->
+            <div>
+                <label id="lableinput" for="email">Email</label>
+                <input type="email" id="input" placeholder="Email-id">
+                <span></span>
+            </div>
+            <div>
+                <label id="lableinput" for="password">Password</label>
+                <input type="password" name="password" id="input" placeholder="Password" />
+                <span></span>
+            </div>
+            <div>
+                <label id="lableinput" for="email">Address</label>
+                <input type="email" id="input" placeholder="Address">
+                <span></span>
+            </div>
+
+            <!-- <div>
+            <label for="number">Phone-Number</label>
+            <input type="number" id="number" placeholder="Phone-Number">
+            <span></span>
+            </div> -->
+            <!-- <div>
+                <label id="lableinput" for="age">Age</label>
+                <input type="number" id="input" placeholder="Age">
+                <span></span>
+            </div> -->
+
+            <div>
+                <label id="checkboxinput">What do you like about our college</label>
+                <input type="checkbox" id="checkbox" /><label id="checkboxvalue">Student</label><br>
+                <input type="checkbox" id="checkbox" /><label id="checkboxvalue">location</label><br>
+                <input type="checkbox" id="checkbox" /><label id="checkboxvalue">campus</label><br>
+                <input type="checkbox" id="checkbox" /><label id="checkboxvalue">Atmosphere</label><br>
+                <input type="checkbox" id="checkbox" /><label id="checkboxvalue">Dorm rooms</label><br>
+                <input type="checkbox" id="checkbox" /><label id="checkboxvalue">Sports</label>
+            </div>
+
+            <div>
+                <label id="checkboxinput">How did you gain interest about this university</label>
+                <input type="radio" id="checkbox" />
+                <label id="checkboxvalue">Friends</label><br>
+                <input type="radio" id="checkbox" />
+                <label id="checkboxvalue">Television</label><br>
+                <input type="radio" id="checkbox" />
+                <label id="checkboxvalue">Internet and others</label><br>
+            </div>
+
+            <div>
+                <label id="checkboxinput">Comments:</label>
+                <textarea id="comment" rows="4" cols="40" id="comments"></textarea>
+            </div>
+
+
+
+            <input id="submitbutton" onclick="myFunction()" type="submit" name="submit" value="Submit"><br><br>
+            <input id="submitbutton" type="reset" name="reset" value="Reset">
+
+        </form>
+
+    </section>
+    <a href="../index.html">
+        <button class="button button2">Home</button>
+    </a>
+</body>
+
+</html>
+<script>
+    var fname = document.getElementById('fname');
+    var lname = document.getElementById('lname');
+    var email = document.getElementById('email');
+    var number = document.getElementById('number');
+    var age = document.getElementById('age');
+    var psw = document.getElementById('psw');
+    var span = document.getElementsByTagName('span');
+    fname.onkeydown = function () {
+        const regexname1 = /^[a-zA-Z ]{2,30}$/;
+        if (regexname1.test(fname.value)) {
+            span[0].innerText = "Your Name is Valid";
+            span[0].style.color = "lime";
+        }
+        else {
+            span[0].innerText = "Enter only characters";
+            span[0].style.color = "red";
+        }
+    }
+    lname.onkeydown = function () {
+        const regexname2 = /^[a-zA-Z ]{2,30}$/;
+        if (regexname2.test(lname.value)) {
+            span[1].innerText = "Your Name is Valid";
+            span[1].style.color = "lime";
+        }
+        else {
+            span[1].innerText = "Enter only characters";
+            span[1].style.color = "red";
+        }
+    }
+    email.onkeydown = function () {
+        const regex1 = /^[a-z0-9](\.?[a-z0-9]){3,}@christuniversity\.in$/;
+        if (regex1.test(email.value)) {
+            span[2].innerText = "Your Email is Valid";
+            span[2].style.color = "lime";
+        }
+        else {
+            span[2].innerText = "Invalid Email Id";
+            span[2].style.color = "red";
+        }
+    }
+    number.onkeydown = function () {
+        const regnum = /^[0-9]{10}$/;
+        if (regnum.test(number.value)) {
+            span[3].innerText = "Your Number is Valid";
+            span[3].style.color = "lime";
+        }
+        else {
+            span[3].innerText = "Invalid Phone Number";
+            span[3].style.color = "red";
+        }
+    }
+    age.onkeydown = function () {
+        const regage = /^[0-9]{1}$/;
+        if (regage.test(age.value)) {
+            span[4].innerText = "Your age is Valid";
+            span[4].style.color = "lime";
+        }
+        else {
+            span[4].innerText = "invalid age";
+            span[4].style.color = "red";
+        }
+    }
+    psw.onkeydown = function () {
+        const regxpsw = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+        if (regxpsw.test(psw.value)) {
+            span[5].innerText = "Valid password";
+            span[5].style.color = "lime";
+        }
+        else {
+            span[5].innerText = "a minimum of 1 lower case letter [a-z] and a minimum of 1 upper case letter [A-Z] and  a minimum of 1 numeric character [0-9] and 1 special character:~`!@#$%^&*()-_+={}[]|\;:<>,./?";
+            span[5].style.color = "red";
+        }
+
+    }
+    function myFunction() {
+        alert("Registered!!!");
+    }
+</script>
